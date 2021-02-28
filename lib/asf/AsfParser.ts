@@ -135,7 +135,7 @@ export class AsfParser extends BasicParser {
           break;
 
         case GUID.CompatibilityObject.str:
-          this.tokenizer.ignore(header.objectSize - AsfObject.HeaderObjectToken.len);
+          await this.tokenizer.ignore(header.objectSize - AsfObject.HeaderObjectToken.len);
           break;
 
         case GUID.ASF_Index_Placeholder_Object.str:
